@@ -1,0 +1,16 @@
+@font-face {
+   font-family: 'Circe Rounded';
+   src: url('../assets/fonts/circlerounded/CirceRounded-Regular.otf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Circe Rounded';
+   src: url('../assets/fonts/circlerounded/CirceRounded-Bold.otf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+
+
