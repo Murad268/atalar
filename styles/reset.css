@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   /* border: 1px solid red; */
 }
 
 a {
@@ -17,6 +18,7 @@ ul, ol {
    --main-font1: 'Open Sans';
    --main-font2: 'Circe Rounded';
    --main-font3: 'Cormorant';
+   --main-font4: 'Sofia Pro';
    --main--text--color1: #333232;
    --main--text--color2: #B590BA;
    --main--text--color3: #FFFFFF;
@@ -25,9 +27,11 @@ ul, ol {
    --main--text--color6: #424242;
    --main--text--color7: #F3F4FA;
    --main--text--color8: #9A9898;
-   --main--text--color9:  #1B1B1B;;
+   --main--text--color9:  #1B1B1B;
+   --main--text--color10: #9E9E9E;
+   --main--text--color11: #3C3B3B;
+   --main--text--color12: #292929;;
 }
-
 .container {
    max-width: 1300px;
    margin: 0 auto;

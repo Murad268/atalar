@@ -270,6 +270,7 @@
 
 .events {
    margin-top: 152px;
+   overflow: hidden;
 }
 .events__slide__image {
    width: 100%;
@@ -416,7 +417,9 @@
   
    color: var(--main--text--color6);
 }
-
+.partners {
+   margin-top: 120px;
+}
 .events__slider__left, .events__slider__right, .photos__carusel__left, .photos__carusel__right, .videos__carusel__right, .videos__carusel__left, .partners__carusel__left, .partners__carusel__right {
    width: 36px;
    height: 36px;
@@ -655,6 +658,162 @@
    color: var(--main--text--color2);
    font-size: 20px;
  }
+
+ .contact {
+   margin-top: 135px;
+ }
+ .contact h3 {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 52px;
+   line-height: 64px;
+   font-family: var(----main-font3);
+   color: var(--main--text--color9);
+   text-align: center;
+ }
+
+ .contact__wrapper {
+   margin-top: 40px;
+   display: flex;
+   align-items: center;
+ }
+ .contact__image, .contact__form {
+   flex: 1;
+ }
+ .contact__form {
+   padding-left: 30px;
+ }
+ .contact__image img {
+   width: 100%;
+ }
+ .contact__form form {
+   display: flex;
+   flex-direction: column;
+   row-gap: 15px;
+ }
+ .contact__form input, .modal__box input {
+   width: 100%;
+   height: 50.01px;
+   opacity: 0.5;
+   padding-left: 30px;
+   border: 1px solid var(--main--text--color10);
+   border-radius: 25px;
+ }
+ .contact__form textarea{
+   width: 100%;
+   height: 196.03px;
+   opacity: 0.5;
+   border: 1px solid var(--main--text--color10);
+   border-radius: 25px;
+   padding: 23px 0 0 30px;
+ }
+ .contact__form button, .modal__box button {
+   width: 100%;
+   height: 60.01px;
+   background-color: var(--main--text--color2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   border-radius: 25px;
+   color: var(--main--text--color3);
+   font-family: var(--main-font4);
+ }
+ .footer {
+   margin-top: 79px;
+ }
+ .footer__copywrither {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 24px;
+   color: var(--main--text--color11);
+   font-family: var(----main-font2);
+   margin-top: 11px;
+ }
+ .footer__wrapper {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+ }
+ .footer__right strong {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 24px;
+   font-family: var(----main-font1);
+   color: var(--main--text--color11);
+   display: block;
+   margin-bottom: 30px;
+ }
+ .footer__right__contact a {
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   color: var(--main--text--color4);
+ }
+ .footer__right {
+   column-gap: 77px;
+   display: flex;
+   align-items: center;
+ }
+ .footer__right__follow__social {
+   display: flex;
+   align-items: center;
+   column-gap: 20px;
+ }
+.mini__copy {
+   display: none;
+}
+
+.modal__overlay {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   visibility: hidden;
+   z-index: -100;
+   background-color: rgba(0, 0, 0, 0);
+}
+.modal__overlay.active {
+   background: rgba(0, 0, 0, 0.3);
+   z-index: 250;
+   visibility: visible;
+
+}
+.modal__box {
+   max-width: 726px;
+   width: 100%;
+   background-color: var(--main--text--color3);
+   padding: 34px 90px 49px 101px;
+   position: relative;
+}
+.modal__box h3 {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 30px;
+   line-height: 45px;
+   margin-bottom: 30px;
+   font-family: var(----main-font1);
+   color: var(--main--text--color12)
+}
+.modal__box form {
+   display: flex;
+   flex-direction: column;
+   row-gap: 15px;
+}
+.modal__box__exit {
+   cursor: pointer;
+   position: absolute;
+   top: 26px;
+   right: 42px;
+}
 @media(max-width:1340px) {
    .videos__carusel__left {
       left: 20px;
@@ -688,12 +847,36 @@
       padding-right: 0;
    }
 }
+@media(max-width: 992px) {
+   .contact__image {
+      display: none;
+   }
+   .contact__form {
+      width: 100%;
+      padding-left: 0;
+   }
+   .contact__wrapper {
+      height: max-content;
+      flex-direction: column;
+   }
+}
 @media(max-width:900px) {
+   .modal__overlay {
+      padding: 0 30px;
+   }
    .events__slide__image {
       height: 180px;
    }
+   .modal__box h3 {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+   }
 }
 @media(max-width:768px) {
+   .modal__box {
+      padding: 55px 10px;
+   }
    .videos__carusel .slick-slide {
       height: 329px;
    }
@@ -719,7 +902,37 @@
       height: 33px;
    }
 }
+@media(max-width: 680px) {
+   .footer__right {
+      column-gap: 40px
+   }
+}
+@media(max-width: 580px) {
+   .footer__wrapper {
+      flex-direction: column;
+      height: max-content;
+      row-gap: 40px;
+   }
+   .footer__left {
+      display: flex;
+      align-items: center
+   }
+   .footer__right {
+      column-gap: 80px;
+      padding-left: 30px;
+   }
+}
 @media(max-width: 568px) {
+   .contact h3 {
+      text-align: left;
+   }
+   .videos h3 {
+      text-align: left;
+      margin-left: 30px;
+   }
+   .partners {
+      margin-top: 0;
+   }
    .subscripe {
       background-image: none;
    }
@@ -749,13 +962,13 @@
    }
 }
 @media(max-width: 450px) {
+   .aboutUs__top__text h4, .evenets__top h3, .photos h3, .videos h3 , .partners h3, .contact h3 {
+      font-size: 32px;
+   }
    .partners__carusel__btns {
       display: none;
    }
-   .videos h3 {
-      text-align: left;
-      margin-left: 30px;
-   }
+
    .videos__carusel .slick-slide {
       height: 197px;
    }
@@ -779,6 +992,25 @@
    }
 }
 @media(max-width:370px) {
+   .footer__right {
+      width: 100%;
+      column-gap: 0;
+      height: max-content;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 40px;
+   }
+   .footer__right strong {
+      margin-bottom: 20px;
+   }
+   .big__copy {
+      display: none;
+     
+   }
+   .mini__copy {
+      display: block;
+      margin-left: 30px;
+   }
    .events__slide__image {
       height: 137px;
    }
@@ -788,9 +1020,8 @@
    .aboutUs {
       margin-top: 60px;
    }
-   .aboutUs__top__text h4, .evenets__top h3, .photos h3, .videos h3 , .partners h3 {
-      font-size: 32px;
-   }
+ 
+
    .aboutUs__top__text p {
       margin-top: 10px;
       font-size: 16px;

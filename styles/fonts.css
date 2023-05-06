@@ -13,4 +13,33 @@
 }
 
 
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('../assets/fonts/sofia__pro/SofiaProRegular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('../assets/fonts/sofia__pro/SofiaProBold.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('../assets/fonts/sofia__pro/SofiaProBlack-Italic.ttf') format('truetype');
+   font-weight: normal;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Sofia Pro';
+   src: url('../assets/fonts/sofia__pro/SofiaProBold-Italic.ttf') format('truetype');
+   font-weight: bold;
+   font-style: italic;
+}
+
+
 

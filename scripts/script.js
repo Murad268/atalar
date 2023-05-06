@@ -210,3 +210,31 @@ $('.events__carusel').slick({
       subMenu.classList.toggle(activeClass);
    })
  }
+
+
+
+
+ function maskPhone(input) {
+  $(input).mask("(+999)99 999 99 99");
+ }
+
+
+
+ maskPhone('#phone');
+
+
+
+ function openModal(eventOpenBtn, modalSelector, exitSelector, activeClass) {
+    const modal = document.querySelector(modalSelector),
+          exit = document.querySelector(exitSelector);
+
+    document.addEventListener("click",  (e) => {
+      if(e.target.classList.contains(eventOpenBtn)) {
+        modal.classList.add(activeClass);
+      }
+    });
+    exit.addEventListener("click",  (e) => {
+        modal.classList.remove(activeClass);
+    });
+ }
+ openModal('events__slide__button', '.modal__overlay', '.modal__box__exit', 'active')
