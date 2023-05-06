@@ -5,6 +5,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+   <link rel="manifest" href="./assets/favicons/site.webmanifest">
+   <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,17 +25,54 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
    <link rel="stylesheet" href="./styles/main.css">
-   <title>Document</title>
+   <title>Atalar</title>
 </head>
 
 <body>
+   <div class="video__overlay">
+      <div class="video__box__exit">
+         <img src="./assets/icons/eventsmodal/Vector.png" alt="">
+      </div>
+      <video controls src="">
+
+      </video>
+   </div>
+   <div class="modal__overlay">
+      <div class="modal__box">
+         <div class="modal__box__exit">
+            <img src="./assets/icons/eventsmodal/Vector.png" alt="">
+         </div>
+
+         <h3>Qeydiyyatdan keç</h3>
+         <form action="">
+            <div><input placeholder="Your name" name="name" type="text"></div>
+            <div><input placeholder="Your surname" name="surname" type="text"></div>
+            <div><input placeholder="E-mail adress" name="email" type="email"></div>
+            <div><input placeholder="Phone number" name="phone" id="phoneModal" type="tel"></div>
+            <div><button>Send</button></div>
+         </form>
+      </div>
+      <div class="success__box passive">
+         <div class="success__box__exit">
+            <img src="./assets/icons/eventsmodal/Vector.png" alt="">
+         </div>
+         <h4>Müraciətiniz qəbul olundu</h4>
+         <div class="success__box__subtitle">
+            Müraciətiniz üçün təşəkkür edirik. Sizinlə yaxın zamanda əlaqə saxlanılacaq
+         </div>
+         <div class="success__box__link"><a href="">Back to Homepage</a></div>
+      </div>
+      <div class="loading__box passive">
+         <img src="./assets/gifs/eventsmodal/Spin-1s-200px (1).gif" alt="">
+      </div>
+   </div>
    <div class="navbar__menu">
       <ul>
-         <li><a href="">About Us</a></li>
-         <li><a href="">Events</a></li>
-         <li><a href="">Photos</a></li>
-         <li><a href="">Videos</a></li>
-         <li><a href="">Contact</a></li>
+         <li><a class="navbar__menu__link" href="#about">About Us</a></li>
+         <li><a class="navbar__menu__link" href="#events">Events</a></li>
+         <li><a class="navbar__menu__link" href="#photos">Photos</a></li>
+         <li><a class="navbar__menu__link" href="#videos">Videos</a></li>
+         <li><a class="navbar__menu__link" href="#contact">Contact</a></li>
       </ul>
       <div class="navbar__menu__language">
          <div class="lang active">AZ</div>
@@ -47,11 +92,11 @@
                <div class="navbar__btns">
                   <div class="navbar__links">
                      <ul>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Events</a></li>
-                        <li><a href="">Photos</a></li>
-                        <li><a href="">Videos</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#photos">Photos</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#contact">Contact</a></li>
                      </ul>
                   </div>
                   <div class="navbar__language">
@@ -81,7 +126,7 @@
       </div>
    </header>
 
-   <section class="aboutUs">
+   <section id="about" class="aboutUs">
       <div class="container">
          <div class="aboutUs__top">
             <div class="aboutUs__top__text">
@@ -113,8 +158,8 @@
                   Pellentesque non diam sollicitudin ac ultrices lacus at vitae risus.
                </p>
                <div class="aboutUs__bottom__text__btns">
-                  <a href="">Download Pdf</a>
-                  <a href="">Download Buklet</a>
+                  <a download href="./assets/downloadfiles/buklet.pdf">Download Pdf</a>
+                  <a download href="./assets/downloadfiles/buklet.txt">Download Buklet</a>
                </div>
             </div>
             <div class="aboutUs__bottom__image">
@@ -124,7 +169,7 @@
       </div>
    </section>
 
-   <section class="events">
+   <section id="events" class="events">
       <div class="container">
          <div class="evenets__top">
             <h3>Events</h3>
@@ -185,7 +230,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                  <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -225,7 +270,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                  <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -265,7 +310,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -305,7 +350,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -345,7 +390,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -385,7 +430,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -425,7 +470,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -465,7 +510,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -505,7 +550,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -545,7 +590,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -585,7 +630,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -625,7 +670,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -665,7 +710,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -705,7 +750,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -745,7 +790,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -785,7 +830,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -825,7 +870,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -865,7 +910,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -905,7 +950,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -945,7 +990,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -985,7 +1030,7 @@
 
                </div>
                <div class="events__slide__btn">
-                  <button>
+                <button class="events__slide__button">
                      Qeydiyyatdan keç
                   </button>
                </div>
@@ -994,7 +1039,7 @@
          
       </div>
    </section>
-   <section class="photos">
+   <section id="photos" class="photos">
       <h3>Photos</h3>
       <div class="photos__carusel">
          <div><img src="./assets/images/photos/Rectangle 42.png" alt=""></div>
@@ -1012,7 +1057,7 @@
       </div>
    </section>
    
-   <section class="videos">
+   <section id="videos" class="videos">
       <h3>Videos</h3>
       <div class="container">
          <div class="videos__carusel__left">
@@ -1027,7 +1072,31 @@
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
                      <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                        <img data-src="./assets/videos/Best Dads Ever - Superhero Dads Compilation 2020.mp4" class="video__slider__overlay__link" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
@@ -1035,63 +1104,39 @@
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
                      <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
@@ -1109,7 +1154,7 @@
             <div class="subscripe__body__form">
                <form action="">
                   <div class="subscripe__body__input">
-                     <input type="text">
+                     <input placeholder="Enter your e-mail" name="email" type="text">
                      <button>Send</button>
                   </div>
                </form>
@@ -1168,8 +1213,82 @@
          </div>
       </div>
    </section>
+
+   <section id="contact" class="contact">
+      <div class="container">
+         <h3>Contact</h3>
+         <div class="contact__wrapper">
+            <div class="contact__image">
+               <img src="./assets/images/contact/Rectangle 35.png" alt="">
+            </div>
+            <div class="contact__form">
+               <form action="">
+                  <div>
+                     <input placeholder="Your name" type="text" name="name">
+                  </div>
+                  <div>
+                     <input placeholder="Your surname" type="text" name="surname">
+                  </div>
+                  <div>
+                     <input placeholder="E-mail adress" type="email" name="email">
+                  </div>
+                  <div>
+                     <input placeholder="Phone number" id="phoneContact" type="tel" name="phone">
+                  </div>
+                  <div>
+                     <textarea placeholder="Write message" name="message" ></textarea>
+                  </div>
+                  <div>
+                     <button>
+                        Contact us
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__wrapper">
+            <div class="footer__left">
+               <div class="footer__logo">
+                  <a href="">
+                     <img src="./assets/images/navbar/5181301478 1.png" alt="">
+                  </a>
+               </div>
+               <div class="footer__copywrither big__copy">
+                  All rights reserved. Developed by Webcoder Agency. 
+               </div>
+            </div>
+            <div class="footer__right">
+               <div class="footer__right__contact">
+                  <strong>Contact</strong>
+                  <div>
+                     <a href="">(+994 555 55 55)</a>
+                  </div>
+               </div>
+               <div class="footer__right__follow">
+                  <strong>Follow us:</strong>
+                  <div class="footer__right__follow__social">
+                     <img src="./assets/icons/footer/Vector.png" alt="">
+                     <img src="./assets/icons/footer/Vector (1).png" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copywrither mini__copy">
+               All rights reserved. Developed by Webcoder Agency. 
+            </div>
+         </div>
+      </div>
+   </footer>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+   <script src="./scripts/functions.js"></script>
+   <script src="./scripts/slickCarusel.js"></script>
    <script src="./scripts/script.js"></script>
 </body>
 
