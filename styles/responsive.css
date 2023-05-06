@@ -190,7 +190,7 @@
 @media(max-width:370px) {
    .video__overlay video {
       width: 250px;
-      height: 150px;
+      height: 151px;
    }
    .footer__right {
       width: 100%;
