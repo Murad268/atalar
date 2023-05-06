@@ -5,8 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
    openSelectMenu('.evenets__top__filter', '.evenets__top__filter .evenets__top__filter__sub', 'active');
    changeSelectMenu('evenets__top__filter__sub__element', '.evenets__top__filter>span');
    filterEvents('.events__slide', '.evenets__top__filter__sub__element');
+   openModal('events__slide__button', '.modal__overlay', '.modal__box__exit', 'active');
+   sendMail('.modal__box form', '.success__box', '.modal__box', '.loading__box', 'passive');
+   closeModal('.modal__overlay', '.success__box__exit', 'active', '.modal__box', '.success__box', 'passive');
 });
 
+function closeModal(overlaySelector, exitSelector, activeClass, modalSelector, successSelector, passiveClass) {
+   const overlay = document.querySelector(overlaySelector),
+         exit = document.querySelector(exitSelector),
+         modalBox = document.querySelector(modalSelector),
+         successBox = document.querySelector(successSelector);
+
+
+         exit.addEventListener('click', () => {
+          overlay.classList.remove(activeClass);
+          modalBox.classList.remove(passiveClass);
+          successBox.classList.add(passiveClass)
+         })
+}
 
 function filterEvents(slideSelector, spanSelector) {
    const slides = document.querySelectorAll(slideSelector),
@@ -68,139 +84,149 @@ function openMenu(triggerSelector, menuSelector, activeClass) {
 
 
 
-$('.events__carusel').slick({
-   infinite: true,
-   slidesToShow: 4,
-   slidesToScroll: 1,
-   arrows: false,
 
-   responsive: [
-      {
-        breakpoint: 1240,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-         breakpoint: 900,
-         settings: {
-           slidesToShow: 2,
-         },
-       },
-       {
-         breakpoint: 768,
-         settings: {
-           slidesToShow: 1,
-           dots: true
-         },
-       }
-    ],
- });
-
- $('.events__slider__right').click(function(){
-   $('.events__carusel').slick('slickNext');
- });
-
- $('.events__slider__left').click(function(){
-   $('.events__carusel').slick('slickPrev');
- });
 
  
 
- $('.photos__carusel').slick({
-   infinite: true,
-   slidesToShow: 2,
-   slidesToScroll: 1,
-   arrows: false,
-   responsive: [
-      {
-        breakpoint: 568,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      
-    ],
-
- });
-
- $('.photos__carusel__right').click(function(){
-   $('.photos__carusel').slick('slickNext');
- });
-
- $('.photos__carusel__left').click(function(){
-   $('.photos__carusel').slick('slickPrev');
- });
 
 
 
- $('.videos__carusel').slick({
-   infinite: true,
-   slidesToShow: 3,
-   slidesToScroll: 1,
-   arrows: false,
-   responsive: [
-      {
-        breakpoint: 1110,
-        settings: {
-          slidesToShow: 2
-        },
-      },
-      {
-         breakpoint: 768,
-         settings: {
-           slidesToShow: 1,
-           dots: true
-         },
-       }
-    ],
 
- });
+ function initSlickCarusel(caruselClass, slickParameters, responsiveParameters, rightButton, leftButton) {
+    $(caruselClass).slick({
+      ...slickParameters,
+      responsive: responsiveParameters
+    })
 
- $('.videos__carusel__right').click(function(){
-   $('.videos__carusel').slick('slickNext');
- });
+    $(rightButton).click(function(){
+      $(caruselClass).slick('slickNext');
+    });
 
- $('.videos__carusel__left').click(function(){
-   $('.videos__carusel').slick('slickPrev');
- });
+    $(leftButton).click(function(){
+      $(caruselClass).slick('slickPrev');
+    });
+ }
 
-
- $('.partners__carusel').slick({
+ initSlickCarusel('.events__carusel', {
    infinite: true,
    slidesToShow: 4,
    slidesToScroll: 1,
    arrows: false,
-   responsive: [
-      {
-        breakpoint: 860,
-        settings: {
-          slidesToShow: 3
-        },
-      },
-      {
-         breakpoint: 700,
-         settings: {
-           slidesToShow: 2
-         },
-       },
-       {
-         breakpoint: 450,
-         settings: {
-           slidesToShow: 1,
-           dots: true
-         },
-       }
-    ],
+ }, 
+ [
+  {
+    breakpoint: 1240,
+    settings: {
+      slidesToShow: 3,
+    },
+  },
+  {
+     breakpoint: 900,
+     settings: {
+       slidesToShow: 2,
+     },
+   },
+   {
+     breakpoint: 768,
+     settings: {
+       slidesToShow: 1,
+       dots: true
+     },
+   }
+ ],
+ '.events__slider__right',
+ 'events__slider__left')
 
- });
- $('.partners__carusel__right').click(function(){
-   $('.partners__carusel').slick('slickNext');
- });
+ initSlickCarusel('.photos__carusel', {
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  arrows: false,
+}, 
+[
+  {
+    breakpoint: 568,
+    settings: {
+      slidesToShow: 1,
+    },
+  },
+  
+],
+'.photos__carusel__right',
+'photos__carusel__left')
 
- $('.partners__carusel__left').click(function(){
-   $('.partners__carusel').slick('slickPrev');
- });
+initSlickCarusel('.videos__carusel', {
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+}, 
+[
+  {
+    breakpoint: 1110,
+    settings: {
+      slidesToShow: 2
+    },
+  },
+  {
+     breakpoint: 768,
+     settings: {
+       slidesToShow: 1,
+       dots: true
+     },
+   }
+],
+'.videos__carusel__right',
+'videos__carusel__left')
+
+initSlickCarusel('.partners__carusel', {
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: false,
+}, 
+[
+  {
+    breakpoint: 860,
+    settings: {
+      slidesToShow: 3
+    },
+  },
+  {
+     breakpoint: 700,
+     settings: {
+       slidesToShow: 2
+     },
+   },
+   {
+     breakpoint: 450,
+     settings: {
+       slidesToShow: 1,
+       dots: true
+     },
+   }
+],
+'.partners__carusel__right',
+'partners__carusel__left')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  function openSelectMenu(selectSelection, subMenuSelection, activeClass) {
    const select = document.querySelector(selectSelection),
@@ -237,4 +263,44 @@ $('.events__carusel').slick({
         modal.classList.remove(activeClass);
     });
  }
- openModal('events__slide__button', '.modal__overlay', '.modal__box__exit', 'active')
+
+
+
+
+ function sendMail(formSelector, successSelector, modalSelector, loadingSelector, passiveClass) {
+    const form = document.querySelector(formSelector),
+          success = document.querySelector(successSelector),
+          modalBox = document.querySelector(modalSelector);
+          loadingBox = document.querySelector(loadingSelector);
+          
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (!checkInputs(`${formSelector} input`)) {
+              alert('Please fill out all fields.');
+              return;
+            }
+   
+           
+            modalBox.classList.add(passiveClass);
+            loadingBox.classList.remove(passiveClass);
+            setTimeout(() => {
+              loadingBox.classList.add(passiveClass);
+              success.classList.remove(passiveClass);
+            }, 3000)
+          })
+ }
+
+
+
+ function checkInputs(inputsSelectors) {
+    const inputs = document.querySelectorAll(inputsSelectors);
+    for (let i = 0; i < inputs.length; i++) {
+      if (!inputs[i].value) {
+        return false;
+      }
+    }
+    return true;
+}
+
+

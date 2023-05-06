@@ -30,7 +30,8 @@ ul, ol {
    --main--text--color9:  #1B1B1B;
    --main--text--color10: #9E9E9E;
    --main--text--color11: #3C3B3B;
-   --main--text--color12: #292929;;
+   --main--text--color12: #292929;
+   --main--text--color13: #0B1323;
 }
 .container {
    max-width: 1300px;
