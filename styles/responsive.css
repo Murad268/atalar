@@ -43,6 +43,10 @@
       height: max-content;
       flex-direction: column;
    }
+   .video__overlay video {
+      width: 600px;
+      height: 400px;
+   }
 }
 @media(max-width:900px) {
    .modal__overlay {
@@ -87,6 +91,10 @@
    }
 }
 @media(max-width: 680px) {
+    .video__overlay video {
+      width: 400px;
+      height: 200px;
+   }
    .footer__right {
       column-gap: 40px
    }
@@ -146,6 +154,10 @@
    }
 }
 @media(max-width: 450px) {
+   .video__overlay video {
+      width: 350px;
+      height: 250px;
+   }
    .aboutUs__top__text h4, .evenets__top h3, .photos h3, .videos h3 , .partners h3, .contact h3 {
       font-size: 32px;
    }
@@ -176,6 +188,10 @@
    }
 }
 @media(max-width:370px) {
+   .video__overlay video {
+      width: 250px;
+      height: 150px;
+   }
    .footer__right {
       width: 100%;
       column-gap: 0;
