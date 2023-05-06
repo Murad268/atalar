@@ -5,6 +5,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+   <link rel="manifest" href="./assets/favicons/site.webmanifest">
+   <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,6 +29,14 @@
 </head>
 
 <body>
+   <div class="video__overlay">
+      <div class="video__box__exit">
+         <img src="./assets/icons/eventsmodal/Vector.png" alt="">
+      </div>
+      <video controls src="">
+
+      </video>
+   </div>
    <div class="modal__overlay">
       <div class="modal__box">
          <div class="modal__box__exit">
@@ -32,7 +48,7 @@
             <div><input placeholder="Your name" name="name" type="text"></div>
             <div><input placeholder="Your surname" name="surname" type="text"></div>
             <div><input placeholder="E-mail adress" name="email" type="email"></div>
-            <div><input placeholder="Phone number" name="phone" id="phone" type="tel"></div>
+            <div><input placeholder="Phone number" name="phone" id="phoneModal" type="tel"></div>
             <div><button>Send</button></div>
          </form>
       </div>
@@ -52,11 +68,11 @@
    </div>
    <div class="navbar__menu">
       <ul>
-         <li><a href="">About Us</a></li>
-         <li><a href="">Events</a></li>
-         <li><a href="">Photos</a></li>
-         <li><a href="">Videos</a></li>
-         <li><a href="">Contact</a></li>
+         <li><a class="navbar__menu__link" href="#about">About Us</a></li>
+         <li><a class="navbar__menu__link" href="#events">Events</a></li>
+         <li><a class="navbar__menu__link" href="#photos">Photos</a></li>
+         <li><a class="navbar__menu__link" href="#videos">Videos</a></li>
+         <li><a class="navbar__menu__link" href="#contact">Contact</a></li>
       </ul>
       <div class="navbar__menu__language">
          <div class="lang active">AZ</div>
@@ -76,11 +92,11 @@
                <div class="navbar__btns">
                   <div class="navbar__links">
                      <ul>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Events</a></li>
-                        <li><a href="">Photos</a></li>
-                        <li><a href="">Videos</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#photos">Photos</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#contact">Contact</a></li>
                      </ul>
                   </div>
                   <div class="navbar__language">
@@ -110,7 +126,7 @@
       </div>
    </header>
 
-   <section class="aboutUs">
+   <section id="about" class="aboutUs">
       <div class="container">
          <div class="aboutUs__top">
             <div class="aboutUs__top__text">
@@ -153,7 +169,7 @@
       </div>
    </section>
 
-   <section class="events">
+   <section id="events" class="events">
       <div class="container">
          <div class="evenets__top">
             <h3>Events</h3>
@@ -1023,7 +1039,7 @@
          
       </div>
    </section>
-   <section class="photos">
+   <section id="photos" class="photos">
       <h3>Photos</h3>
       <div class="photos__carusel">
          <div><img src="./assets/images/photos/Rectangle 42.png" alt=""></div>
@@ -1041,7 +1057,7 @@
       </div>
    </section>
    
-   <section class="videos">
+   <section id="videos" class="videos">
       <h3>Videos</h3>
       <div class="container">
          <div class="videos__carusel__left">
@@ -1056,7 +1072,31 @@
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
                      <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                        <img data-src="./assets/videos/Best Dads Ever - Superhero Dads Compilation 2020.mp4" class="video__slider__overlay__link" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
+                  <div class="video__slider__overlay">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
@@ -1064,63 +1104,39 @@
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
                      <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div  class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
                <div>
                   <img src="./assets/images/videos/Rectangle 48.png" alt="">
                   <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <img src="./assets/images/videos/Rectangle 48.png" alt="">
-                  <div class="video__slider__overlay">
-                     <div class="videos__carusel__play">
-                        <img src="./assets/icons/videos/Vector.png" alt="">
+                     <div data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" class="videos__carusel__play">
+                        <img class="video__slider__overlay__link" data-src="./assets/videos/Magic Tricks Shots for Dads.mp4" src="./assets/icons/videos/Vector.png" alt="">
                      </div>
                   </div>
                </div>
@@ -1198,7 +1214,7 @@
       </div>
    </section>
 
-   <section class="contact">
+   <section id="contact" class="contact">
       <div class="container">
          <h3>Contact</h3>
          <div class="contact__wrapper">
@@ -1217,7 +1233,7 @@
                      <input placeholder="E-mail adress" type="email" name="email">
                   </div>
                   <div>
-                     <input placeholder="Phone number" id="phone" type="tel" name="phone">
+                     <input placeholder="Phone number" id="phoneContact" type="tel" name="phone">
                   </div>
                   <div>
                      <textarea placeholder="Write message" name="message" ></textarea>
@@ -1271,6 +1287,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+   <script src="./scripts/functions.js"></script>
+   <script src="./scripts/slickCarusel.js"></script>
    <script src="./scripts/script.js"></script>
 </body>
 

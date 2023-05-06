@@ -4,7 +4,9 @@
    box-sizing: border-box;
    /* border: 1px solid red; */
 }
-
+html {
+   scroll-behavior: smooth;
+}
 a {
    text-decoration: none;
 }
@@ -13,7 +15,10 @@ ul, ol {
    list-style-type: none;
 }
 
-
+body.active {
+   padding-right: 17px;
+   overflow: hidden;
+}
 :root {
    --main-font1: 'Open Sans';
    --main-font2: 'Circe Rounded';
