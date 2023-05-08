@@ -180,6 +180,7 @@ function openVideo(triggerClass, modalSelector, activeClass, exitSelector) {
 	})
 	exit.addEventListener('click', () => {
 		modal.classList.remove(activeClass);
+		video.pause()
 	})
 }
 
